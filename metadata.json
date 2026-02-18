@@ -1,0 +1,5 @@
+{
+  "name": "PhyloGenius",
+  "description": "Une application pédagogique interactive pour apprendre la classification phylogénétique et les groupes emboîtés.",
+  "requestFramePermissions": []
+}
