@@ -1,4 +1,4 @@
-import { Collection, MatrixData, TreeNode, BoxGroup } from './types';
+﻿import { Collection, MatrixData, TreeNode, BoxGroup } from './types';
 
 // Images are placeholders for now
 const getImg = (text: string) => `https://placehold.co/200x200/e2e8f0/1e293b?text=${encodeURIComponent(text)}`;
@@ -6,9 +6,9 @@ const getImg = (text: string) => `https://placehold.co/200x200/e2e8f0/1e293b?tex
 // --- Collection 0: Vertébrés (Niveau 1 - Exemple du cours) ---
 
 const vert1Species = [
-  { id: 'sardine', name: 'Sardine', image: './images/sardine.jpg', description: 'Poisson à nageoires rayonnées.' },
-  { id: 'grenouille', name: 'Grenouille', image: './images/grenouille.jpg', description: 'Amphibien au cycle de vie aquatique et terrestre.' },
-  { id: 'lezard', name: 'Lézard', image: './images/lézard.jpg', description: 'Reptile à écailles.' },
+  { id: 'sardine', name: 'Sardine', image: '/images/sardine.jpg', description: 'Poisson à nageoires rayonnées.' },
+  { id: 'grenouille', name: 'Grenouille', image: '/images/grenouille.jpg', description: 'Amphibien au cycle de vie aquatique et terrestre.' },
+  { id: 'lezard', name: 'Lézard', image: '/images/lézard.jpg', description: 'Reptile à écailles.' },
 ];
 
 const vert1Chars = [
@@ -67,11 +67,11 @@ const vert1Boxes: BoxGroup[] = [
 // --- Collection 1: Vertébrés (Fossils & Current) ---
 
 const vertSpecies = [
-  { id: 'lezard', name: 'Lézard', image: './images/lézard.jpg', description: 'Reptile actuel à écailles.' },
-  { id: 'croco', name: 'Crocodile', image: './images/crocodile.jpg', description: 'Reptile aquatique prédateur.' },
-  { id: 'compso', name: 'Compsognathus', image: './images/Compsognathus.png', description: 'Petit dinosaure carnivore bipède.' },
-  { id: 'archaeo', name: 'Archéoptéryx', image: './images/Archeopteryx.png', description: 'Fossile avec des plumes et des griffes aux ailes.' },
-  { id: 'pigeon', name: 'Pigeon', image: './images/pigeon.jpg', description: 'Oiseau actuel très commun, capable de vol.' },
+  { id: 'lezard', name: 'Lézard', image: '/images/lézard.jpg', description: 'Reptile actuel à écailles.' },
+  { id: 'croco', name: 'Crocodile', image: '/images/crocodile.jpg', description: 'Reptile aquatique prédateur.' },
+  { id: 'compso', name: 'Compsognathus', image: '/images/Compsognathus.png', description: 'Petit dinosaure carnivore bipède.' },
+  { id: 'archaeo', name: 'Archéoptéryx', image: '/images/Archeopteryx.png', description: 'Fossile avec des plumes et des griffes aux ailes.' },
+  { id: 'pigeon', name: 'Pigeon', image: '/images/pigeon.jpg', description: 'Oiseau actuel très commun, capable de vol.' },
 ];
 
 const vertChars = [
@@ -163,10 +163,10 @@ const vertBoxes: BoxGroup[] = [
 // --- Collection 2: Lignée Humaine ---
 
 const humanSpecies = [
-  { id: 'australo', name: 'Australopithèque', image: './images/Australopithèque.jpg', description: 'Hominine bipède ancien.' },
-  { id: 'habilis', name: 'Homo habilis', image: './images/Homo habilis.jpg', description: 'Premier représentant du genre Homo.' },
-  { id: 'neander', name: 'Homo neanderthalensis', image: './images/Homo neanderthalensis.jpg', description: 'Homme de Neandertal, robuste.' },
-  { id: 'sapiens', name: 'Homo sapiens', image: './images/Homo sapiens.png', description: 'Homme moderne.' },
+  { id: 'australo', name: 'Australopithèque', image: '/images/Australopithèque.jpg', description: 'Hominine bipède ancien.' },
+  { id: 'habilis', name: 'Homo habilis', image: '/images/Homo habilis.jpg', description: 'Premier représentant du genre Homo.' },
+  { id: 'neander', name: 'Homo neanderthalensis', image: '/images/Homo neanderthalensis.jpg', description: 'Homme de Neandertal, robuste.' },
+  { id: 'sapiens', name: 'Homo sapiens', image: '/images/Homo sapiens.png', description: 'Homme moderne.' },
 ];
 
 const humanChars = [
@@ -256,8 +256,8 @@ export const COLLECTIONS: Collection[] = [
     name: 'Vertébrés',
     subtitle: 'Niveau 1',
     description: 'Introduction à la classification : Sardine, Grenouille et Lézard.',
-    thumbnail: './images/Theme vertebres1.png',
-    hoverImage: './images/vertebres1.png',
+    thumbnail: '/images/Theme vertebres1.png',
+    hoverImage: '/images/vertebres1.png',
     species: vert1Species,
     characters: vert1Chars,
     correctMatrix: vert1Matrix,
@@ -277,8 +277,8 @@ export const COLLECTIONS: Collection[] = [
     name: 'Vertébrés',
     subtitle: 'Niveau 2 (Actuels et Fossiles)',
     description: 'Comprendre les liens de parenté entre dinosaures, oiseaux et mammifères.',
-    thumbnail: './images/Theme vertebres 2.png',
-    hoverImage: './images/vertebres2.png',
+    thumbnail: '/images/Theme vertebres 2.png',
+    hoverImage: '/images/vertebres2.png',
     species: vertSpecies,
     characters: vertChars,
     correctMatrix: vertMatrix,
@@ -290,7 +290,7 @@ export const COLLECTIONS: Collection[] = [
         { id: 'lezard', label: 'Le Lézard', isCorrect: false },
         { id: 'pigeon', label: 'Le Pigeon', isCorrect: true },
       ],
-      explanation: "Bien que le Crocodile ressemble au Lézard, il partage une 'Fenêtre mandibulaire' avec le Pigeon et les dinosaures, un caractère que le Lézard n'a pas."
+      explanation: "Bien que le Crocodile ressemble au Lézard, il partage une 'Fenêtre mandibulaire' with le Pigeon and the dinosaurs, a character that the Lizard doesn't have."
     }
   },
   {
@@ -298,8 +298,8 @@ export const COLLECTIONS: Collection[] = [
     name: 'Lignée Humaine',
     subtitle: '',
     description: 'Compare les crânes des hominines pour reconstituer notre histoire évolutive récente.',
-    thumbnail: './images/theme ligneehumaine.jpg',
-    hoverImage: './images/ligneehumaine1.jpg',
+    thumbnail: '/images/theme ligneehumaine.jpg',
+    hoverImage: '/images/ligneehumaine1.jpg',
     species: humanSpecies,
     characters: humanChars,
     correctMatrix: humanMatrix,
@@ -312,7 +312,7 @@ export const COLLECTIONS: Collection[] = [
         { id: 'neander', label: 'Homo neanderthalensis', isCorrect: true },
         { id: 'habilis', label: 'Homo habilis', isCorrect: false },
       ],
-      explanation: "Homo sapiens et Neandertal partagent un ancêtre commun plus récent que les autres. Ils partagent le caractère 'Trou occipital avancé' et un volume crânien important."
+      explanation: "Homo sapiens and Neanderthals share a more recent common ancestor than the others. They share the character 'Advanced occipital hole' and a large cranial volume."
     }
   }
 ];
